@@ -1,0 +1,14 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: 🚚 Get latest code
+        uses: sebastianpopp/git-ftp-action@releases/v3
+        with:
+          url: "ftp://wedd-ag.nick01mx.beget.tech"
+          user: ${{secrets.FTP_LOGIN}}
+          password: ${{ secrets.FTP_PASSWORD}}
