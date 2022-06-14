@@ -9,6 +9,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          url: "ftp://wedd-ag.nick01mx.beget.tech"
+          url: "ftp://art.nick01mx.beget.tech/"
           user: ${{secrets.FTP_LOGIN}}
           password: ${{ secrets.FTP_PASSWORD}}
