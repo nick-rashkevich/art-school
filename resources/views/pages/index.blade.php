@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,300italic'>
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/front.css" type="text/css">
-    <script defer src="js/front.js"></script>
+    <link rel="stylesheet" href="css/main-page/front.css" type="text/css">
+    <script defer src="js/main-page/front.js"></script>
 
     <title>Главная страница</title>
 </head>
@@ -37,6 +37,26 @@
                     <div id="logo">
                         <a href="#" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="storage/images/logo.png" alt="Logo"></a>
                     </div><!-- #logo end -->
+
+                    <div class="header-misc">
+
+                        <!-- PROFILE ICON
+=========================================== -->
+                        <div class="dropdown mx-3 mr-lg-0">
+                            <a href="#" class="btn btn-secondary btn-sm dropdown-toggle gradient-grey-brown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="icon-user"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                <a class="dropdown-item text-left" href="#">Профиль</a>
+                                <a class="dropdown-item text-left" href="#">Сообщения <span class="badge badge-pill badge-secondary float-right" style="margin-top: 3px;">5</span></a>
+                                <a class="dropdown-item text-left" href="#">Настройки</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-left" href="#">Выход <i class="icon-signout"></i></a>
+                            </ul>
+                        </div>
+{{--                        OR --}}
+                        <div class="header-buttons mr-3">
+                            <a href="/signpage" class="button button-rounded button-border button-small m-0">Вход</a>
+                        </div>
+                    </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-line-menu"></span>
                     </button>
@@ -71,16 +91,11 @@
             <div class="container">
                 <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
 
-
-                    <div class="header-misc">
-
-
-                        <div class="header-buttons mr-3">
-                            <a href="#" class="button button-rounded button-border button-small m-0">Войти</a>
-                            <a href="#" class="button button-rounded button-small m-0 ml-2">Регистрация</a>
-                        </div>
-
-                    </div>
+{{--                    <div class="header-misc">--}}
+{{--                        <div class="header-buttons mr-3">--}}
+{{--                            <a href="#" class="button button-rounded button-border button-small m-0">Вход</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <div id="primary-menu-trigger">
                         <svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
@@ -429,7 +444,7 @@
             <div class="footer-widgets-wrap">
 
                 <div class="row">
-                    <div class="col-6 col-md"  style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+                    <div class="col-6 col-md"  style="background: url('storage/images/world-map.png') no-repeat center center; background-size: 100%;">
                         <img class="mb-3" src="{{asset('storage/images/logo-black-1.png')}}" alt="Image" width="160">
                         <p class="text-white-50" style="font-size: 16px;">Дипломный проект в рамках обучения по курсу WEB Developer</p>
                         <a href="#" class="mb-2 d-block"><i class="icon-line2-call-in mr-2"></i>+375-25-915-68-80</a>
@@ -455,13 +470,13 @@
 ============================================= -->
 <div id="gotoTop" class="icon-angle-up"></div>
 
-<!-- JavaScripts
-============================================= -->
-<script src="js/main-page/front.js"></script>
+{{--<!-- JavaScripts--}}
+{{--============================================= -->--}}
+{{--<script src="js/main-page/front.js"></script>--}}
 {{--<script src="js/plugins.min.js"></script>--}}
 
-<!-- Footer Scripts
-============================================= -->
+{{--<!-- Footer Scripts--}}
+{{--============================================= -->--}}
 {{--<script src="js/functions.js"></script>--}}
 
 </body>

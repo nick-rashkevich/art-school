@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/index', function () {
+    return view('pages.index');
+});
+
+Route::get('/blog', function () {
+    return view('pages.blog');
+});
+
+Route::get('/signpage', function () {
+    return view('pages.login-register');
 });
 
 
