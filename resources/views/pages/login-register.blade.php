@@ -24,7 +24,7 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="#" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="storage/images/logo.png" alt="Logo"></a>
+                    <a href="{{route('home')}}" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="storage/images/logo.png" alt="Logo"></a>
                 </div><!-- #logo end -->
 
                 <div id="primary-menu-trigger">
@@ -46,7 +46,7 @@
                             <a class="menu-link" href="#"><div>Преподаватели</div></a>
                         </li>
                         <li class="menu-item mega-menu">
-                            <a class="menu-link" href="/blog"><div>Блог</div></a>
+                            <a class="menu-link" href="{{route('posts')}}"><div>Блог</div></a>
                         </li>
                         <li class="menu-item mega-menu">
                             <a class="menu-link" href="#"><div>О нас</div></a>
@@ -78,8 +78,7 @@
         <h1>My Account</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Login</li>
+            <li class="breadcrumb-item active" aria-current="page">Sign</li>
         </ol>
     </div>
 

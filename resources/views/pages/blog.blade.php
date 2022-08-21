@@ -23,7 +23,7 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="#" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="storage/images/logo.png" alt="Logo"></a>
+                    <a href="{{route('home')}}" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="storage/images/logo.png" alt="Logo"></a>
                 </div><!-- #logo end -->
                 <div class="header-misc">
                 @if(Auth::user())
