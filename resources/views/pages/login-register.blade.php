@@ -37,7 +37,7 @@
 
                     <ul class="menu-container">
                         <li class="menu-item">
-                            <a class="menu-link" href="/index"><div>Главная</div></a>
+                            <a class="menu-link" href="{{route('home')}}"><div>Главная</div></a>
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="#"><div>Курсы</div></a>
@@ -99,24 +99,25 @@
                     <li class="inline-block"><a href="#tab-register">Register</a></li>
                 </ul>
 
-                <div class="tab-container">
+                @include('pages.errors')
 
+                <div class="tab-container">
                     <div class="tab-content" id="tab-login">
                         <div class="card mb-0">
                             <div class="card-body" style="padding: 40px;">
-                                <form id="login-form" name="login-form" class="mb-0" action="#" method="post">
-
+                                <form id="login-form" name="login-form" class="mb-0" action="{{route('signin')}}" method="post">
+                                @csrf
                                     <h3>Login to your Account</h3>
 
                                     <div class="row">
                                         <div class="col-12 form-group">
-                                            <label for="login-form-username">Username:</label>
-                                            <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" />
+                                            <label for="login-form-username">Email:</label>
+                                            <input type="text" id="login-form-username" name="email" value="{{old('email')}}" class="form-control" />
                                         </div>
 
                                         <div class="col-12 form-group">
                                             <label for="login-form-password">Password:</label>
-                                            <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
+                                            <input type="password" id="login-form-password" name="password" value="" class="form-control" />
                                         </div>
 
                                         <div class="col-12 form-group">
@@ -135,37 +136,37 @@
                             <div class="card-body" style="padding: 40px;">
                                 <h3>Register for an Account</h3>
 
-                                <form id="register-form" name="register-form" class="row mb-0" action="#" method="post">
-
+                                <form id="register-form" name="register-form" class="row mb-0" action="{{route('signup')}}" method="post">
+                                    @csrf
                                     <div class="col-12 form-group">
                                         <label for="register-form-name">Name:</label>
-                                        <input type="text" id="register-form-name" name="register-form-name" value="" class="form-control" />
+                                        <input type="text" id="register-form-name" name="name" value="{{old('name')}}" class="form-control" />
                                     </div>
 
                                     <div class="col-12 form-group">
                                         <label for="register-form-email">Email Address:</label>
-                                        <input type="text" id="register-form-email" name="register-form-email" value="" class="form-control" />
+                                        <input type="text" id="register-form-email" name="email" value="{{old('email')}}" class="form-control" />
                                     </div>
 
                                     <div class="col-12 form-group">
                                         <label for="register-form-username">Choose a Username:</label>
-                                        <input type="text" id="register-form-username" name="register-form-username" value="" class="form-control" />
+                                        <input type="text" id="register-form-username" name="username" value="{{old('name')}}" class="form-control" />
                                     </div>
 
-                                    <div class="col-12 form-group">
-                                        <label for="register-form-phone">Phone:</label>
-                                        <input type="text" id="register-form-phone" name="register-form-phone" value="" class="form-control" />
-                                    </div>
+{{--                                    <div class="col-12 form-group">--}}
+{{--                                        <label for="register-form-phone">Phone:</label>--}}
+{{--                                        <input type="text" id="register-form-phone" name="register-form-phone" value="" class="form-control" />--}}
+{{--                                    </div>--}}
 
                                     <div class="col-12 form-group">
                                         <label for="register-form-password">Choose Password:</label>
-                                        <input type="password" id="register-form-password" name="register-form-password" value="" class="form-control" />
+                                        <input type="password" id="register-form-password" name="password" value="" class="form-control" />
                                     </div>
 
-                                    <div class="col-12 form-group">
-                                        <label for="register-form-repassword">Re-enter Password:</label>
-                                        <input type="password" id="register-form-repassword" name="register-form-repassword" value="" class="form-control" />
-                                    </div>
+{{--                                    <div class="col-12 form-group">--}}
+{{--                                        <label for="register-form-repassword">Re-enter Password:</label>--}}
+{{--                                        <input type="password" id="register-form-repassword" name="register-form-repassword" value="" class="form-control" />--}}
+{{--                                    </div>--}}
 
                                     <div class="col-12 form-group">
                                         <button class="button button-3d button-black m-0" id="register-form-submit" name="register-form-submit" value="register">Register Now</button>

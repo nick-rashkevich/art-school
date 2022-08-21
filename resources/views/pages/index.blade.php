@@ -42,20 +42,23 @@
 
                         <!-- PROFILE ICON
 =========================================== -->
+                        @if(Auth::user())
                         <div class="dropdown mx-3 mr-lg-0">
                             <a href="#" class="btn btn-secondary btn-sm dropdown-toggle gradient-grey-brown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="icon-user"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                                <a class="dropdown-item text-left" href="#">Профиль</a>
+                                <a class="dropdown-item text-left" href="#">Профиль  — {{Auth::user()->name}}</a>
                                 <a class="dropdown-item text-left" href="#">Сообщения <span class="badge badge-pill badge-secondary float-right" style="margin-top: 3px;">5</span></a>
                                 <a class="dropdown-item text-left" href="#">Настройки</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-left" href="#">Выход <i class="icon-signout"></i></a>
+                                <a class="dropdown-item text-left" href="{{route('logout')}}">Выход <i class="icon-signout"></i></a>
                             </ul>
                         </div>
+                        @else
 {{--                        OR --}}
                         <div class="header-buttons mr-3">
                             <a href="/signpage" class="button button-rounded button-border button-small m-0">Вход</a>
                         </div>
+                        @endif
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-line-menu"></span>

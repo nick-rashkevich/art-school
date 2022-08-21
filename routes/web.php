@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +16,19 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'blog'], function (){
+    Route::get('/', [PostController::class, 'index'])->name('posts');
+    Route::get('/{slug}', [PostController::class, 'show'])->name('post.show');
+//    Route::get('/{slug}', [PostController::class, 'category'])->name('category.show');
 });
 
-Route::get('/index', function () {
-    return view('pages.index');
-});
-
-Route::get('/blog', function () {
-    return view('pages.blog');
-});
-
-Route::get('/signpage', function () {
-    return view('pages.login-register');
+Route::group([ 'name' => 'auth'], function (){
+    Route::get('signpage', [AuthController::class, 'signpage'])->name('signpage');
+    Route::post('signin', [AuthController::class, 'login'])->name('signin');
+    Route::post('signup', [AuthController::class, 'register'])->name('signup');
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
 
