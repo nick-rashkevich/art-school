@@ -196,7 +196,7 @@
             <div class="row">
                 <div class="col-6 col-md"  style="background: url('storage/images/world-map.png') no-repeat center center; background-size: 100%;">
                     <img class="mb-3" src="{{asset('storage/images/logo-black-1.png')}}" alt="Image" width="160">
-                    <p class="text-white-50" style="font-size: 16px;">Дипломный проект в рамках обучения по курсу WEB Developer</p>
+                    <p class="text-white-50" style="font-size: 16px;">Дипломный проект в рамках курса WEB Developer</p>
                     <a href="#" class="mb-2 d-block"><i class="icon-line2-call-in mr-2"></i>+375-25-915-68-80</a>
                     <a href="#"><i class="icon-line2-envelope mr-2"></i>nick_019@mail.ru</a>
                 </div>
